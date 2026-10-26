@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Mathias Jarry, développeur full-stack à Paris. Parcours, projets et contact. Contenu fictif de démonstration."
+    />
+    <meta name="theme-color" content="#f3efe6" />
+    <title>Mathias Jarry — Développeur full-stack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23161513'/><text y='68' x='50' text-anchor='middle' font-size='58' fill='%23f3efe6' font-family='Georgia'>M</text></svg>"
+    />
+    <script>
+      try {
+        var savedTheme = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (error) {
+        /* Le thème clair reste le repli. */
+      }
+    </script>
+  </head>
+  <body id="top">
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+    <header class="site-header" id="site-header">
+      <a class="logo" href="#top" aria-label="Mathias Jarry, retour en haut">
+        <span>MJ</span>
+      </a>
+
+      <nav class="nav-panel" id="nav-panel" aria-label="Sections">
+        <a href="#apropos">À propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#projets">Projets</a>
+        <a href="#formation">Formation</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-pressed="false"
+          aria-label="Activer le thème sombre"
+        >
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"></path>
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-expanded="false"
+          aria-controls="nav-panel"
+        >
+          <span class="menu-bars" aria-hidden="true"></span>
+          <span class="menu-label">Menu</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Portfolio · Paris · 2026</p>
+          <h1>
+            <span>Mathias</span>
+            <span class="name-italic">Jarry</span>
+          </h1>
+          <p class="role">Développeur full-stack</p>
+          <p class="lede">
+            Je conçois des sites et des applications web clairs, rapides, et
+            assez simples pour qu’une autre personne puisse les reprendre.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projets">Voir les projets</a>
+            <a class="button button-ghost" href="#contact">Me contacter</a>
+            <button type="button" class="button button-ghost" id="print-cv">
+              Version imprimable
+            </button>
+          </div>
+        </div>
+
+        <aside class="sheet">
+          <p class="eyebrow">En bref</p>
+          <dl class="facts">
+            <div>
+              <dt>Basé à</dt>
+              <dd>Paris, France</dd>
+            </div>
+            <div>
+              <dt>Disponibilité</dt>
+              <dd>Novembre 2026</dd>
+            </div>
+            <div>
+              <dt>Expérience</dt>
+              <dd>6 ans</dd>
+            </div>
+            <div>
+              <dt>Format</dt>
+              <dd>Freelance et CDI</dd>
+            </div>
+            <div>
+              <dt>Langues</dt>
+              <dd>Français, anglais</dd>
+            </div>
+            <div>
+              <dt>E-mail</dt>
+              <dd><a href="mailto:mathias.jarry@exemple.fr">mathias.jarry@exemple.fr</a></dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="band" aria-label="Repères">
+        <ul class="stats">
+          <li><strong>6</strong><span>années d’expérience</span></li>
+          <li><strong>18</strong><span>projets livrés</span></li>
+          <li><strong>4</strong><span>produits encore en ligne</span></li>
+          <li><strong>48 h</strong><span>pour une première réponse</span></li>
+        </ul>
+      </section>
+
+      <section class="section" id="apropos">
+        <div class="section-head">
+          <p class="eyebrow">01 — À propos</p>
+          <h2>Du concret, du code lisible, des interfaces calmes.</h2>
+        </div>
+        <div class="about-grid">
+          <div class="portrait" aria-hidden="true">
+            <span>MJ</span>
+            <p>Portrait à ajouter</p>
+          </div>
+          <div class="about-copy">
+            <p>
+              Je m’appelle Mathias Jarry. Depuis six ans, j’accompagne des
+              studios, des théâtres, des collectivités et de petites équipes
+              produit. Je passe du temps sur le parcours avant d’écrire la
+              première ligne&nbsp;: ce que la personne cherche, ce qui la bloque,
+              ce qui peut attendre.
+            </p>
+            <p>
+              J’aime les problèmes ordinaires bien résolus. Un formulaire qu’on
+              comprend du premier coup. Un tableau de bord qu’on lit sans mode
+              d’emploi. Une base de code qu’on rouvre six mois plus tard sans
+              soupirer.
+            </p>
+            <p>
+              En ce moment, je cherche une mission freelance ou un CDI, à Paris
+              ou à distance, autour d’un produit utile et d’une équipe qui
+              écrit les choses clairement.
+            </p>
+          </div>
+        </div>
+        <ul class="services">
+          <li>
+            <h3>Produit web</h3>
+            <p>De l’esquisse du parcours jusqu’à la mise en ligne, avec une stack tenue volontairement courte.</p>
+          </li>
+          <li>
+            <h3>Interface</h3>
+            <p>Maquettes sobres, intégration soignée, attention particulière au mobile et à l’accessibilité.</p>
+          </li>
+          <li>
+            <h3>Reprise d’existant</h3>
+            <p>Clarifier un projet déjà en production, sans tout réécrire pour le plaisir de réécrire.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="competences">
+        <div class="section-head">
+          <p class="eyebrow">02 — Compétences</p>
+          <h2>Les outils que j’ouvre vraiment.</h2>
+        </div>
+        <div class="skill-grid">
+          <article class="skill-group">
+            <h3>Interface</h3>
+            <ul>
+              <li><span>HTML et CSS</span><small>quotidien</small></li>
+              <li><span>Accessibilité</span><small>quotidien</small></li>
+              <li><span>Design systems</span><small>à l’aise</small></li>
+              <li><span>Figma</span><small>à l’aise</small></li>
+              <li><span>Motion léger</span><small>à l’aise</small></li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Développement</h3>
+            <ul>
+              <li><span>JavaScript</span><small>quotidien</small></li>
+              <li><span>TypeScript</span><small>quotidien</small></li>
+              <li><span>React</span><small>quotidien</small></li>
+              <li><span>Node.js</span><small>à l’aise</small></li>
+              <li><span>PostgreSQL</span><small>à l’aise</small></li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Atelier</h3>
+            <ul>
+              <li><span>Git</span><small>quotidien</small></li>
+              <li><span>Vite</span><small>quotidien</small></li>
+              <li><span>Tests</span><small>à l’aise</small></li>
+              <li><span>Docker</span><small>notions solides</small></li>
+              <li><span>CI</span><small>notions solides</small></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="parcours">
+        <div class="section-head">
+          <p class="eyebrow">03 — Parcours</p>
+          <h2>Trois équipes, des produits qui ont duré.</h2>
+        </div>
+        <ol class="timeline">
+          <li>
+            <p class="when"><time datetime="2023-03">2023</time> — aujourd’hui</p>
+            <div>
+              <h3>Développeur full-stack senior</h3>
+              <p class="where">Studio Nord · Paris</p>
+              <p>
+                Refonte du produit principal, mise en place d’un petit design
+                system, et accompagnement de deux développeurs juniors. Je
+                participe aussi aux échanges avec les clients, du cadrage à la
+                recette.
+              </p>
+              <ul class="chips">
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <p class="when"><time datetime="2020-09">2020</time> — <time datetime="2023-02">2023</time></p>
+            <div>
+              <h3>Développeur full-stack</h3>
+              <p class="where">Atelier Pixel · Lyon</p>
+              <p>
+                Sites et outils internes pour des clients culturels et
+                associatifs. J’y ai appris à livrer vite sans laisser une dette
+                illisible, et à parler design avec des gens qui ne codent pas.
+              </p>
+              <ul class="chips">
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>PHP léger</li>
+                <li>Figma</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <p class="when"><time datetime="2018-06">2018</time> — <time datetime="2020-08">2020</time></p>
+            <div>
+              <h3>Développeur front-end</h3>
+              <p class="where">Agence Lumen · Lille</p>
+              <p>
+                Intégration d’interfaces, animations discrètes et premiers
+                chantiers d’accessibilité. Collaboration quotidienne avec la
+                direction artistique.
+              </p>
+              <ul class="chips">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Accessibilité</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section" id="projets">
+        <div class="section-head section-head-row">
+          <div>
+            <p class="eyebrow">04 — Projets</p>
+            <h2>Quatre chantiers représentatifs.</h2>
+          </div>
+          <div class="filters" role="group" aria-label="Filtrer les projets">
+            <button type="button" data-filter="tous" aria-pressed="true">Tous</button>
+            <button type="button" data-filter="produit" aria-pressed="false">Produits</button>
+            <button type="button" data-filter="site" aria-pressed="false">Sites</button>
+            <button type="button" data-filter="outil" aria-pressed="false">Outils</button>
+          </div>
+        </div>
+        <p class="project-count" id="project-count" aria-live="polite">4 projets</p>
+        <div class="project-grid" id="project-grid">
+          <article class="project" data-category="produit">
+            <div class="project-visual tone-green" aria-hidden="true">
+              <span>01</span>
+              <strong>Trajets</strong>
+            </div>
+            <div class="project-body">
+              <p class="meta">2025 · Produit</p>
+              <h3>Halte</h3>
+              <p>Application de covoiturage pour les trajets du quotidien, dans les villes moyennes.</p>
+              <ul class="chips">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+              </ul>
+            </div>
+            <button type="button" class="project-open" aria-label="Voir le détail du projet Halte"></button>
+            <template>
+              <p class="eyebrow">Produit · 2025 · Studio Nord</p>
+              <h3>Halte</h3>
+              <p class="dialog-role">Rôle&nbsp;: développement principal, avec la designeuse du studio.</p>
+              <p>
+                Halte met en relation des conducteurs et des passagers sur des
+                trajets domicile-travail. La promesse tenait en une phrase&nbsp;:
+                réserver en trois écrans, sans créer de compte au premier essai.
+              </p>
+              <p>
+                J’ai conçu le parcours de réservation, l’API des trajets et le
+                tableau de bord utilisé par deux collectivités pilotes. La
+                carte s’appuie sur MapLibre. Les messages entre passagers sont
+                volontairement brefs.
+              </p>
+              <h4>Ce qui a compté</h4>
+              <ul>
+                <li>Un premier trajet publié en moins de deux minutes.</li>
+                <li>Une interface lisible en plein soleil, sur un téléphone moyen.</li>
+                <li>12&nbsp;000 trajets enregistrés au premier trimestre, chiffre de démonstration.</li>
+              </ul>
+              <ul class="chips">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+                <li>MapLibre</li>
+              </ul>
+            </template>
+          </article>
+
+          <article class="project" data-category="site">
+            <div class="project-visual tone-wine" aria-hidden="true">
+              <span>02</span>
+              <strong>Scène</strong>
+            </div>
+            <div class="project-body">
+              <p class="meta">2024 · Site</p>
+              <h3>Salle 7</h3>
+              <p>Site d’un théâtre&nbsp;: programmation, billetterie et archives, lisible sur téléphone.</p>
+              <ul class="chips">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+            <button type="button" class="project-open" aria-label="Voir le détail du projet Salle 7"></button>
+            <template>
+              <p class="eyebrow">Site · 2024 · Atelier Pixel</p>
+              <h3>Salle 7</h3>
+              <p class="dialog-role">Rôle&nbsp;: design d’interface et développement.</p>
+              <p>
+                Le théâtre avait un site lent, une programmation en PDF et une
+                billetterie ouverte dans un autre onglet. Nous avons tout
+                ramené sur une seule page d’accueil, puis une fiche par
+                spectacle.
+              </p>
+              <p>
+                La saison tient sur une grille simple. Les archives restent
+                consultables. Le poids de la page d’accueil est resté sous
+                200&nbsp;ko, hors photos.
+              </p>
+              <h4>Ce qui a compté</h4>
+              <ul>
+                <li>La programmation du mois visible sans scroll sur un grand écran.</li>
+                <li>Un contraste suffisant pour les textes posés sur les photos.</li>
+                <li>Une rédaction que l’équipe du théâtre peut mettre à jour seule.</li>
+              </ul>
+              <ul class="chips">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </template>
+          </article>
+
+          <article class="project" data-category="outil">
+            <div class="project-visual tone-slate" aria-hidden="true">
+              <span>03</span>
+              <strong>Chantier</strong>
+            </div>
+            <div class="project-body">
+              <p class="meta">2023 · Outil</p>
+              <h3>Orée</h3>
+              <p>Suivi de chantier pour une PME du bâtiment&nbsp;: photos, avancement, comptes rendus.</p>
+              <ul class="chips">
+                <li>TypeScript</li>
+                <li>React</li>
+              </ul>
+            </div>
+            <button type="button" class="project-open" aria-label="Voir le détail du projet Orée"></button>
+            <template>
+              <p class="eyebrow">Outil · 2023 · Studio Nord</p>
+              <h3>Orée</h3>
+              <p class="dialog-role">Rôle&nbsp;: conception fonctionnelle et développement.</p>
+              <p>
+                Les chefs de chantier envoyaient des photos par messagerie et
+                recopiaient l’avancement dans un tableur le vendredi soir. Orée
+                rassemble les deux, avec un compte rendu généré en fin de
+                semaine.
+              </p>
+              <p>
+                L’interface tient en grands boutons, peu de couleurs, et un
+                mode hors-ligne minimal pour les photos prises sans réseau.
+                Nous avons testé l’outil sur trois chantiers avant de le
+                généraliser.
+              </p>
+              <h4>Ce qui a compté</h4>
+              <ul>
+                <li>Une photo classée par lot, pas par date d’envoi.</li>
+                <li>Un compte rendu PDF envoyé au client le vendredi.</li>
+                <li>Moins de tableurs parallèles, dès le deuxième mois.</li>
+              </ul>
+              <ul class="chips">
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>IndexedDB</li>
+              </ul>
+            </template>
+          </article>
+
+          <article class="project" data-category="site">
+            <div class="project-visual tone-clay" aria-hidden="true">
+              <span>04</span>
+              <strong>Livres</strong>
+            </div>
+            <div class="project-body">
+              <p class="meta">2022 · Site</p>
+              <h3>Bruine</h3>
+              <p>Vitrine et lettre d’information pour une librairie indépendante de quartier.</p>
+              <ul class="chips">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Netlify</li>
+              </ul>
+            </div>
+            <button type="button" class="project-open" aria-label="Voir le détail du projet Bruine"></button>
+            <template>
+              <p class="eyebrow">Site · 2022 · Atelier Pixel</p>
+              <h3>Bruine</h3>
+              <p class="dialog-role">Rôle&nbsp;: design, intégration et mise en place de la lettre.</p>
+              <p>
+                Bruine est une librairie de quartier. Le site devait présenter
+                la table du mois, les événements du samedi, et une lettre
+                envoyée deux fois par mois. Rien d’autre.
+              </p>
+              <p>
+                J’ai composé une page longue, typographique, avec un formulaire
+                d’inscription très court. La libraire ajoute un événement en
+                modifiant un fichier, sans interface d’administration.
+              </p>
+              <h4>Ce qui a compté</h4>
+              <ul>
+                <li>Une page qui ressemble à la vitrine, pas à un modèle générique.</li>
+                <li>400 inscrits à la lettre au bout d’un an, chiffre de démonstration.</li>
+                <li>Aucune dépendance lourde à maintenir.</li>
+              </ul>
+              <ul class="chips">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Netlify</li>
+              </ul>
+            </template>
+          </article>
+        </div>
+        <p class="empty-projects" id="empty-projects" hidden>Aucun projet dans cette catégorie.</p>
+      </section>
+
+      <section class="section" id="temoignages" aria-labelledby="temoignages-title">
+        <div class="section-head">
+          <p class="eyebrow">05 — Témoignages</p>
+          <h2 id="temoignages-title">Ce qu’en disent les équipes.</h2>
+        </div>
+        <div class="quotes">
+          <figure>
+            <blockquote>
+              <p>« Mathias a repris un produit confus et en a fait un outil que l’équipe ouvre vraiment le matin. Le code est lisible, les échanges aussi. »</p>
+            </blockquote>
+            <figcaption>
+              <strong>Inès Bernard</strong>
+              <span>Directrice de produit, Studio Nord</span>
+            </figcaption>
+          </figure>
+          <figure>
+            <blockquote>
+              <p>« On a enfin un site que je peux expliquer à un régisseur en cinq minutes. La programmation est à jour, et le téléphone n’est plus une punition. »</p>
+            </blockquote>
+            <figcaption>
+              <strong>Marc Elbaz</strong>
+              <span>Régisseur, Théâtre Salle 7</span>
+            </figcaption>
+          </figure>
+          <figure>
+            <blockquote>
+              <p>« Il pose les questions ennuyeuses au bon moment. Celles qui évitent de construire la mauvaise chose avec beaucoup de soin. »</p>
+            </blockquote>
+            <figcaption>
+              <strong>Sofia Nguyen</strong>
+              <span>Fondatrice, Atelier Pixel</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="formation">
+        <div class="section-head">
+          <p class="eyebrow">06 — Formation</p>
+          <h2>Études, certificats, et le reste.</h2>
+        </div>
+        <div class="study-grid">
+          <article>
+            <h3>Études</h3>
+            <ul class="study-list">
+              <li>
+                <p class="when">2016 — 2018</p>
+                <p><strong>Master ingénierie logicielle</strong><br />Université de Lille</p>
+              </li>
+              <li>
+                <p class="when">2013 — 2016</p>
+                <p><strong>Licence informatique</strong><br />Université de Lille</p>
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h3>Certificats</h3>
+            <ul class="study-list">
+              <li>
+                <p class="when">2024</p>
+                <p><strong>Accessibilité numérique</strong><br />Formation RGAA, 5 jours</p>
+              </li>
+              <li>
+                <p class="when">2022</p>
+                <p><strong>AWS Cloud Practitioner</strong><br />Notions d’hébergement, rien de plus ambitieux</p>
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h3>À côté</h3>
+            <ul class="study-list">
+              <li>
+                <p class="when">Langues</p>
+                <p><strong>Français</strong> natif<br /><strong>Anglais</strong> courant<br /><strong>Espagnol</strong> notions</p>
+              </li>
+              <li>
+                <p class="when">En dehors</p>
+                <p>Typographie, photo argentique, randonnée, et un café serré avant d’ouvrir l’éditeur.</p>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="section-head">
+          <p class="eyebrow">07 — Contact</p>
+          <h2>Un message court suffit.</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <p>
+              Décrivez le produit, le délai, et ce que vous attendez de moi.
+              Je réponds sous 48&nbsp;heures les jours ouvrés.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <span>E-mail</span>
+                <a href="mailto:mathias.jarry@exemple.fr">mathias.jarry@exemple.fr</a>
+              </li>
+              <li>
+                <span>Téléphone</span>
+                <a href="tel:+33600000000">+33 6 00 00 00 00</a>
+              </li>
+              <li>
+                <span>Ville</span>
+                <strong>Paris, déplacements possibles</strong>
+              </li>
+              <li>
+                <span>GitHub</span>
+                <strong>mathias-jarry</strong>
+              </li>
+              <li>
+                <span>LinkedIn</span>
+                <strong>mathias-jarry</strong>
+              </li>
+            </ul>
+          </div>
+
+          <form id="contact-form" novalidate>
+            <div class="field">
+              <label for="name">Nom</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+              <p class="field-error" id="name-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required />
+              <p class="field-error" id="email-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="subject">Sujet</label>
+              <select id="subject" name="subject" required>
+                <option value="">Choisir</option>
+                <option>Un projet</option>
+                <option>Une opportunité</option>
+                <option>Une question</option>
+              </select>
+              <p class="field-error" id="subject-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required minlength="12"></textarea>
+              <p class="field-error" id="message-error" hidden></p>
+            </div>
+            <button type="submit" class="button button-primary">Envoyer le message</button>
+            <p class="form-note">Démonstration&nbsp;: le message reste dans le navigateur, il n’est envoyé nulle part.</p>
+          </form>
+
+          <div class="form-success" id="form-success" hidden tabindex="-1">
+            <p class="eyebrow">Message préparé</p>
+            <h3>Merci, le formulaire est valide.</h3>
+            <p id="success-copy"></p>
+            <button type="button" class="button button-ghost" id="reset-form">Écrire un autre message</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><strong>Mathias Jarry</strong> · Développeur full-stack</p>
+      <p>Textes, projets et coordonnées fictifs, à remplacer par les vôtres.</p>
+      <p>© <span id="year">2026</span></p>
+      <a href="#top">Haut de page</a>
+    </footer>
+
+    <dialog id="project-dialog" aria-labelledby="dialog-title-slot">
+      <button type="button" class="dialog-close" id="dialog-close" aria-label="Fermer">Fermer</button>
+      <div class="dialog-body" id="dialog-body"></div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
