@@ -1,11 +1,25 @@
-name: Deploy
+name: CI/CD
 
 on:
   push:
-    branches: [main]
+    branches: [main, preprod]
+  pull_request:
+    branches: [main, preprod]
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run unit tests
+        run: npm test
+
   deploy:
+    needs: test
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,7 +31,17 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
+      - name: Choose target
+        run: |
+          if [ "${{ github.ref_name }}" = "main" ]; then
+            echo "DEST=/var/www/portfolio" >> $GITHUB_ENV
+          else
+            echo "DEST=/var/www/portfolio-preprod" >> $GITHUB_ENV
+          fi
+
       - name: Deploy with rsync
         run: |
-          rsync -avz --delete --exclude '.git' --exclude '.github' \
-            ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/portfolio/
+          rsync -avz --delete \
+            --exclude '.git' --exclude '.github' \
+            --exclude 'node_modules' --exclude 'package.json' --exclude '*.test.js' --exclude 'utils.js' \
+            ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:$DEST/
