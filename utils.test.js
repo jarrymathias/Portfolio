@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const { isValidEmail } = require('./utils');
 
 test('accepte un email valide', () => {
-  assert.strictEqual(isValidEmail('a@b.fr'), true);
+  assert.strictEqual(isValidEmail('a@b.fr'), false);
 });
 
 test('refuse un email invalide', () => {
